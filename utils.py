@@ -15,7 +15,7 @@ import os
 
 
 
-def display_umap(data, mol_col:str, split:tuple, split_name:str, data_cols:list=None, method:Literal["tsne","umap"]="tsne"):
+def display_chemspace(data, mol_col:str, split:tuple =None, split_name:str=None, data_cols:list=None, method:Literal["tsne","umap"]="tsne"):
     mols = data[mol_col].apply(dm.to_mol)
     features = np.array([dm.to_fp(mol) for mol in mols])
     if method == "umap":
@@ -25,8 +25,9 @@ def display_umap(data, mol_col:str, split:tuple, split_name:str, data_cols:list=
     else:
         raise ValueError("Specify the embedding method")
     data[f"{method}_0"], data[f"{method}_1"] = embedding[:, 0], embedding[:, 1]
-    data.loc[split[0], split_name] = "train"
-    data.loc[split[1], split_name] = "test"
+    if split is not None and split_name is not None:
+        data.loc[split[0], split_name] = "train"
+        data.loc[split[1], split_name] = "test"
     ncols = 1
     if data_cols is not None:
         ncols += len(data_cols)
@@ -50,7 +51,7 @@ def display_umap(data, mol_col:str, split:tuple, split_name:str, data_cols:list=
         x=f"{method}_0",
         y=f"{method}_1",
         # palette="rainbow",
-        hue=data[split_name].values,
+        hue=data[split_name].values if split_name is not None else None,
         ax=ax,
         s=20,
     )

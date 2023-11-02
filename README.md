@@ -2,9 +2,17 @@
 
 The Polaris datasets and benchmarks recipes.
 
-This repository is a central hub for the storage, organization, and collaboration of notebooks essential for data curation and design benchmarking tasks listed in the Polaris Hub. 
+This repository is a central hub for the storage, organization, and collaboration of notebooks essential for data curation and design benchmarking tasks listed in the [Polaris Hub](https://polarishub.io). 
 
-## Data pre-processing
+## Collection groups:
+The current Polaris hub hosts three groups of datasets and benchmarks. 
+- ![ADME](https://storage.googleapis.com/polaris-public/icons/icons8-whale-96-ADME.png) ADME properties
+- ![Molprop](https://storage.googleapis.com/polaris-public/icons/icons8-bear-100-Molprop.png) Molecular properties
+- ![Kinase](https://storage.googleapis.com/polaris-public/icons/icons8-fox-60-kinases.png) Human kinases
+
+
+## Basic steps of data curation and processing
+Most of the datasets in Polaris hub were curated by the steps in below:
 
 **Step 1** - Curate the chemistry information
   - Clean the molecules by perform molecule sanitization and fix, standardization molecules, salts/solvents removals.
@@ -17,7 +25,6 @@ This repository is a central hub for the storage, organization, and collaboratio
   - Detect potential outliers of the dataset. Verify the data resource and remove the dubious data points.
   - Convert the continuous values based on provided threshold values to classification tasks.
   - Detect activity cliff between the stereoisomers. Those isomers and their bioactivity values can be removed/masked from dataset if the downstream molecule representation is not able to differentiate the stereoisomers.
-
 
 
 **Step 3** - Visual inspection
