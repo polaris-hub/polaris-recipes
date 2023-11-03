@@ -1,6 +1,7 @@
 import umap
 import warnings
-warnings.filterwarnings('ignore')
+
+warnings.filterwarnings("ignore")
 import numpy as np
 import datamol as dm
 
@@ -14,8 +15,14 @@ from oauth2client.service_account import ServiceAccountCredentials
 import os
 
 
-
-def display_chemspace(data, mol_col:str, split:tuple =None, split_name:str=None, data_cols:list=None, method:Literal["tsne","umap"]="tsne"):
+def display_chemspace(
+    data,
+    mol_col: str,
+    split: tuple = None,
+    split_name: str = None,
+    data_cols: list = None,
+    method: Literal["tsne", "umap"] = "tsne",
+):
     mols = data[mol_col].apply(dm.to_mol)
     features = np.array([dm.to_fp(mol) for mol in mols])
     if method == "umap":
@@ -31,7 +38,7 @@ def display_chemspace(data, mol_col:str, split:tuple =None, split_name:str=None,
     ncols = 1
     if data_cols is not None:
         ncols += len(data_cols)
-    fig, axes = plt.subplots(ncols=ncols, nrows=1, figsize=(ncols*6, 5))
+    fig, axes = plt.subplots(ncols=ncols, nrows=1, figsize=(ncols * 6, 5))
     if data_cols is not None:
         axes = axes.flatten()
         for i, col in enumerate(data_cols):
@@ -59,21 +66,24 @@ def display_chemspace(data, mol_col:str, split:tuple =None, split_name:str=None,
     return fig
 
 
-def load_readme(path:str):
+def load_readme(path: str):
     with dm.fs.fsspec.open(path) as f:
         readme = f.read()
     return readme
 
+
 from tempfile import NamedTemporaryFile
+
+
 def save_figure(fig, remote_path, local_path=None):
     if not local_path:
-        temp =  NamedTemporaryFile()
+        temp = NamedTemporaryFile()
         local_path = temp.name
     fig.savefig(local_path)
-    
+
     client = storage.Client()
     bucket_name = remote_path.split("/")[2]
-    blob_name =  "/".join(remote_path.split("/")[3:])
+    blob_name = "/".join(remote_path.split("/")[3:])
     bucket = client.get_bucket(bucket_name)
     blob = bucket.blob(blob_name)
     blob.upload_from_filename(local_path)
@@ -87,12 +97,13 @@ from medchem.catalogs import NamedCatalogs
 from medchem.catalogs import list_named_catalogs
 from medchem.catalogs import catalog_from_smarts
 
+
 def basic_filter(data, mol_col):
     ##
     # Br  [!#1!#6!#7!#8!#9!#15!#16!#17]~[*,#1]
 
     # This filter is designed to identify compounds with atom types outside those typically found in organic molecules H,C,N,O,F,P,S,Cl. As you can see in the figure below, this filter does indeed pick up a lot of silly molecules that probably shouldn't be in anyone's screening collection.
-    
+
     # Copper complexes
     # Zinc complexes
     # Boronates
@@ -102,16 +113,18 @@ def basic_filter(data, mol_col):
 
     data = data.reset_index(drop=True)
     # rule_of_vebe rule_of_five rule_of_generative_design_strict
-    data['mol'] = data[mol_col].apply(lambda x: dm.to_mol(x))
-        
+    data["mol"] = data[mol_col].apply(lambda x: dm.to_mol(x))
+
     query = "[!#1!#6!#7!#8!#9!#15!#16!#17!#35!#53]~[*,#1]"
-    
-    data["HasUndesiredEle"] = data.mol.apply(lambda x: len(x.GetSubstructMatches(dm.from_smarts(query)))>0)
+
+    data["HasUndesiredEle"] = data.mol.apply(
+        lambda x: len(x.GetSubstructMatches(dm.from_smarts(query))) > 0
+    )
 
     # nibr
     catalog = NamedCatalogs.nibr()
     data["match_nibr_catalog"] = data["mol"].apply(catalog.HasMatch)
-    
+
     # Create the filter object
     rfilter = mc.rules.RuleFilters(
         # You can specifiy a rule as a string or as a callable
