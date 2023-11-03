@@ -12,11 +12,11 @@ The current Polaris hub hosts three groups of datasets and benchmarks.
  -->
 
 ## Basic steps of data curation and processing
-Most of the datasets in Polaris hub were curated by the steps in below:
+Most of the datasets in Polaris hub were curated by the steps below:
 
 **Step 1** - Curate the chemistry information
-  - Clean the molecules by perform molecule sanitization and fix, standardization molecules, salts/solvents removals.
-  - Detect the stereochemistry information in the molecules. Such as undefined stereo centers and information. It's crucial in the case of the activity cliff among the stereoisomers.
+  - Clean the molecules by performing molecule sanitization and fixing, standardization of molecules, and salts/solvents removal.
+  - Detect the stereochemistry information in the molecules. Such as undefined stereocenters and information. It's crucial in the case of the activity cliff among the stereoisomers.
 
 
 **Step 2** - Curate the measured values
@@ -28,9 +28,9 @@ Most of the datasets in Polaris hub were curated by the steps in below:
 
 
 **Step 3** - Visual inspection
-  - Access molecular diversity and distribution in the chemical space. This can guide the decision on which splitting approach to employ. 
-  - Visualize the distribution of bioactivity values. It's useful to exam whether it's meaningful to convert to classification task.
-  - Check molecules which contain undesired characters.
+  - Assess molecular diversity and distribution in the chemical space. This can guide the decision on which splitting approach to employ. 
+  - Visualize the distribution of bioactivity values. It's useful to examine whether it's meaningful to convert to classification task.
+  - Check molecules that contain undesired characters.
 
 ## Related links
 The data curation philosophy and guildelines can be found in [Polaris Hub](https://polarishub.io/Documentations)
