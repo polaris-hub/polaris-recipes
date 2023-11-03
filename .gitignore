@@ -1,0 +1,12 @@
+.ipynb_checkpoints/README-checkpoint.md
+.ipynb_checkpoints/utils-checkpoint.py
+*/*/.ipynb_checkpoints
+/figures
+/icons
+readme/*/*
+*/*/*/.ipynb_checkpoints
+*/.ipynb_checkpoints
+*/.DS_Store
+*/*/.DS_Store
+*.pyc
+
