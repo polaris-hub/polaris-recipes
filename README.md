@@ -4,12 +4,12 @@ The Polaris datasets and benchmarks recipes.
 
 This repository is a central hub for the storage, organization, and collaboration of notebooks essential for data curation and design benchmarking tasks listed in the [Polaris Hub](https://polarishub.io). 
 
-## Collection groups:
+<!-- ## Collection groups:
 The current Polaris hub hosts three groups of datasets and benchmarks. 
 - ![ADME](https://storage.googleapis.com/polaris-public/icons/icons8-whale-96-ADME.png) ADME properties
 - ![Molprop](https://storage.googleapis.com/polaris-public/icons/icons8-bear-100-Molprop.png) Molecular properties
 - ![Kinase](https://storage.googleapis.com/polaris-public/icons/icons8-fox-60-kinases.png) Human kinases
-
+ -->
 
 ## Basic steps of data curation and processing
 Most of the datasets in Polaris hub were curated by the steps in below:
@@ -31,3 +31,6 @@ Most of the datasets in Polaris hub were curated by the steps in below:
   - Access molecular diversity and distribution in the chemical space. This can guide the decision on which splitting approach to employ. 
   - Visualize the distribution of bioactivity values. It's useful to exam whether it's meaningful to convert to classification task.
   - Check molecules which contain undesired characters.
+
+## Related links
+The data curation philosophy and guildelines can be found in [Polaris Hub](https://polarishub.io/Documentations)
