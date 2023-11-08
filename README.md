@@ -33,4 +33,4 @@ Most of the datasets in Polaris hub were curated by the steps below:
   - Check molecules that contain undesired characters.
 
 ## Related links
-The data curation philosophy and guildelines can be found in [Polaris Hub](https://polarishub.io/Documentations)
+The data curation philosophy and guildelines can be found in [Polaris Hub](https://polarishub.io/pages/documentation)
