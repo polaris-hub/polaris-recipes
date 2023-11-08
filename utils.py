@@ -1,28 +1,34 @@
-import umap
-import warnings
-
-warnings.filterwarnings("ignore")
-import numpy as np
-import datamol as dm
-
-import seaborn as sns
-import matplotlib.pyplot as plt
-from scipy import stats
+import os
+from tempfile import NamedTemporaryFile
 from typing import Literal
-from sklearn.manifold import TSNE
+
+import warnings
+warnings.filterwarnings("ignore")
+
+from scipy import stats
+
+import numpy as np
 from gcloud import storage
 from oauth2client.service_account import ServiceAccountCredentials
-import os
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import umap
 
+from sklearn.manifold import TSNE
+import datamol as dm
+import medchem
+from medchem.catalogs._catalogs import NamedCatalogs
 
 def display_chemspace(
-    data,
+    data: pd.DataFrame,
     mol_col: str,
     split: tuple = None,
     split_name: str = None,
     data_cols: list = None,
     method: Literal["tsne", "umap"] = "tsne",
 ):
+    """ Show chemical space of molecule, optionally between traint/test split """
     mols = data[mol_col].apply(dm.to_mol)
     features = np.array([dm.to_fp(mol) for mol in mols])
     if method == "umap":
@@ -35,9 +41,13 @@ def display_chemspace(
     if split is not None and split_name is not None:
         data.loc[split[0], split_name] = "train"
         data.loc[split[1], split_name] = "test"
+    
     ncols = 1
     if data_cols is not None:
-        ncols += len(data_cols)
+        if split_name is not None:
+            ncols += len(data_cols)
+        else:
+           ncols = len(data_cols)
     fig, axes = plt.subplots(ncols=ncols, nrows=1, figsize=(ncols * 6, 5))
     if data_cols is not None:
         axes = axes.flatten()
@@ -46,36 +56,35 @@ def display_chemspace(
                 data=data,
                 x=f"{method}_0",
                 y=f"{method}_1",
-                # palette="rainbow",
                 hue=data[data_cols[i]].values,
                 ax=axes[i],
                 s=20,
             )
             axes[i].set_title(f"{method} embedding of compounds for {col}")
     ax = axes if data_cols is None else axes[-1]
-    sns.scatterplot(
-        data=data,
-        x=f"{method}_0",
-        y=f"{method}_1",
-        # palette="rainbow",
-        hue=data[split_name].values if split_name is not None else None,
-        ax=ax,
-        s=20,
-    )
-    ax.set_title(f"{method} embedding of compounds for {split_name}")
+    if split_name is not None:
+        sns.scatterplot(
+            data=data,
+            x=f"{method}_0",
+            y=f"{method}_1",
+            hue=data[split_name].values,
+            ax=ax,
+            s=20,
+        )
+        ax.set_title(f"{method} embedding of compounds for {split_name}")
+    
     return fig
 
 
 def load_readme(path: str):
+    """Load a readme file from local/remote url."""
     with dm.fs.fsspec.open(path) as f:
         readme = f.read()
     return readme
 
 
-from tempfile import NamedTemporaryFile
-
-
-def save_figure(fig, remote_path, local_path=None):
+def save_figure(fig, remote_path:str, local_path:str=None):
+    """Save figure to both remote google could url and/or local path"""
     if not local_path:
         temp = NamedTemporaryFile()
         local_path = temp.name
@@ -89,34 +98,21 @@ def save_figure(fig, remote_path, local_path=None):
     blob.upload_from_filename(local_path)
 
 
-import datamol as dm
-import pandas as pd
-
-import medchem as mc
-from medchem.catalogs import NamedCatalogs
-from medchem.catalogs import list_named_catalogs
-from medchem.catalogs import catalog_from_smarts
-
-
-def basic_filter(data, mol_col):
-    ##
-    # Br  [!#1!#6!#7!#8!#9!#15!#16!#17]~[*,#1]
-
-    # This filter is designed to identify compounds with atom types outside those typically found in organic molecules H,C,N,O,F,P,S,Cl. As you can see in the figure below, this filter does indeed pick up a lot of silly molecules that probably shouldn't be in anyone's screening collection.
-
-    # Copper complexes
-    # Zinc complexes
-    # Boronates
-    # Cobalt complexes
-    # Arsenates
-    # NIBR
+def molecule_checker(data:pd.DataFrame, mol_col:str):
+    """ 
+    This checker is used to highlight the molecules which show undeisrable properties 
+    and potentially should be removed from dataset.
+    Such as molecules with the atom types outside those typically found in organic molecules H,C,N,O,F,P,S,Cl. 
+    The `nibr`, `rule_of_vebe`, `rule_of_five`, `rule_of_generative_design_strict` are also applied in this checker, 
+    only for visual inspection purpose.
+        
+    """
 
     data = data.reset_index(drop=True)
-    # rule_of_vebe rule_of_five rule_of_generative_design_strict
+    
     data["mol"] = data[mol_col].apply(lambda x: dm.to_mol(x))
 
     query = "[!#1!#6!#7!#8!#9!#15!#16!#17!#35!#53]~[*,#1]"
-
     data["HasUndesiredEle"] = data.mol.apply(
         lambda x: len(x.GetSubstructMatches(dm.from_smarts(query))) > 0
     )
@@ -126,7 +122,7 @@ def basic_filter(data, mol_col):
     data["match_nibr_catalog"] = data["mol"].apply(catalog.HasMatch)
 
     # Create the filter object
-    rfilter = mc.rules.RuleFilters(
+    rfilter = medchem.rules.RuleFilters(
         # You can specifiy a rule as a string or as a callable
         rule_list=["rule_of_five", "rule_of_veber", "rule_of_generative_design_strict"],
     )
