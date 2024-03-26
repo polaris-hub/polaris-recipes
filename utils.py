@@ -27,6 +27,7 @@ def display_chemspace(
     split_name: str = None,
     data_cols: list = None,
     method: Literal["tsne", "umap"] = "tsne",
+    nrows:int = 2,
 ):
     """ Show chemical space of molecule, optionally between traint/test split """
     mols = data[mol_col].apply(dm.to_mol)
@@ -43,15 +44,19 @@ def display_chemspace(
         data.loc[split[1], split_name] = "test"
     
     ncols = 1
+    nrows = 1 if data_cols is None else nrows
+    
     if data_cols is not None:
         if split_name is not None:
             ncols += len(data_cols)
         else:
            ncols = len(data_cols)
-    fig, axes = plt.subplots(ncols=ncols, nrows=1, figsize=(ncols * 6, 5))
+        ncols = np.ceil(ncols/nrows).astype(int)
+    fig, axes = plt.subplots(ncols=ncols, nrows=nrows, figsize=(ncols * 6, 5*nrows))
     if data_cols is not None:
         axes = axes.flatten()
         for i, col in enumerate(data_cols):
+            print()
             sns.scatterplot(
                 data=data,
                 x=f"{method}_0",
@@ -60,8 +65,10 @@ def display_chemspace(
                 ax=axes[i],
                 s=20,
             )
-            axes[i].set_title(f"{method} embedding of compounds for {col}")
-    ax = axes if data_cols is None else axes[-1]
+            axes[i].set_title(f"{method} embedding\n{col}")
+        ax = axes[-1]
+    else:
+        ax = axes
     if split_name is not None:
         sns.scatterplot(
             data=data,
@@ -72,7 +79,7 @@ def display_chemspace(
             s=20,
         )
         ax.set_title(f"{method} embedding of compounds for {split_name}")
-    
+    fig.tight_layout() 
     return fig
 
 
@@ -96,46 +103,3 @@ def save_figure(fig, remote_path:str, local_path:str=None):
     bucket = client.get_bucket(bucket_name)
     blob = bucket.blob(blob_name)
     blob.upload_from_filename(local_path)
-
-
-def molecule_checker(data:pd.DataFrame, mol_col:str):
-    """ 
-    This checker is used to highlight the molecules which show undeisrable properties 
-    and potentially should be removed from dataset.
-    Such as molecules with the atom types outside those typically found in organic molecules H,C,N,O,F,P,S,Cl. 
-    The `nibr`, `rule_of_vebe`, `rule_of_five`, `rule_of_generative_design_strict` are also applied in this checker, 
-    only for visual inspection purpose.
-        
-    """
-
-    data = data.reset_index(drop=True)
-    
-    data["mol"] = data[mol_col].apply(lambda x: dm.to_mol(x))
-
-    query = "[!#1!#6!#7!#8!#9!#15!#16!#17!#35!#53]~[*,#1]"
-    data["HasUndesiredEle"] = data.mol.apply(
-        lambda x: len(x.GetSubstructMatches(dm.from_smarts(query))) > 0
-    )
-
-    # nibr
-    catalog = NamedCatalogs.nibr()
-    data["match_nibr_catalog"] = data["mol"].apply(catalog.HasMatch)
-
-    # Create the filter object
-    rfilter = medchem.rules.RuleFilters(
-        # You can specifiy a rule as a string or as a callable
-        rule_list=["rule_of_five", "rule_of_veber", "rule_of_generative_design_strict"],
-    )
-    results = rfilter(
-        mols=data["mol"].tolist(),
-        n_jobs=-1,
-        progress=True,
-        progress_leave=True,
-        scheduler="auto",
-        keep_props=False,
-        fail_if_invalid=True,
-    )
-
-    data = pd.concat([data, results.drop(columns=["mol"])], axis=1)
-
-    return data
