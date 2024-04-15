@@ -10,3 +10,4 @@ readme/*/*
 */*/.DS_Store
 *.pyc
 
+04_ADME_NCATS/data/cyp2d6_veith.tab
