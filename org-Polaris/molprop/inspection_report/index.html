@@ -1,0 +1,205 @@
+ <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                background-color: #f9f9f9;
+            }
+            header {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            h1, h2, h3 {
+                margin-bottom: 10px;
+            }
+            p {
+                margin-bottom: 15px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            footer {
+                text-align: center;
+                margin-top: 20px;
+                color: #888;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                width: auto; /* ie8 */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Curation Report</h1>
+                <p>Time: 2024-06-03 11:46:53</p>
+                <p>Version: dev</p>
+            </header>
+            <!-- Sections -->
+            
+                <h2>mol_curation</h2>
+
+                <!-- Logs -->
+                
+                <h3>Logs</h3>
+                <ul>
+                
+                    <li>New column added: MOL_smiles</li>
+                
+                    <li>New column added: MOL_molhash_id</li>
+                
+                    <li>New column added: MOL_molhash_id_no_stereo</li>
+                
+                    <li>New column added: MOL_num_stereoisomers</li>
+                
+                    <li>New column added: MOL_num_undefined_stereoisomers</li>
+                
+                    <li>New column added: MOL_num_defined_stereo_center</li>
+                
+                    <li>New column added: MOL_num_undefined_stereo_center</li>
+                
+                    <li>New column added: MOL_num_stereo_center</li>
+                
+                    <li>New column added: MOL_undefined_E_D</li>
+                
+                    <li>New column added: MOL_undefined_E/Z</li>
+                
+                    <li>Default `ecfp` fingerprint is used to visualize the chemical space.</li>
+                
+                    <li>Molecules with undefined stereocenter detected: 17111.</li>
+                
+                </ul>
+                
+
+                <!-- Images -->
+                
+                <h3>Images</h3>
+                
+                    
+                    <h4>Distribution in Chemical Space - ECFP</h4>
+                    
+                    <img src="images/0-Distribution_in_Chemical_Space_ECFP.png"/>
+                    
+                
+                    
+                    <h4>Molecules with undefined stereocenters</h4>
+                    
+                    <img src="images/1-Molecules_with_undefined_stereocenters.png"/>
+                    
+                    <h4>There are 17111 molecules with undefined stereocenter(s). It's recommended to use <auroris.curation.action.StereoIsomerACDetection> and check the stereoisomers and activity cliffs in the dataset.</h4>
+                    
+                
+                
+
+            
+                <h2>deduplicate</h2>
+
+                <!-- Logs -->
+                
+                <h3>Logs</h3>
+                <ul>
+                
+                    <li>Deduplication merged and removed 0 duplicated molecules from dataset</li>
+                
+                </ul>
+                
+
+                <!-- Images -->
+                
+
+            
+                <h2>distribution</h2>
+
+                <!-- Logs -->
+                
+
+                <!-- Images -->
+                
+                <h3>Images</h3>
+                
+                    
+                    <h4>Data distribution - mw</h4>
+                    
+                    <img src="images/2-Data_distribution_mw.png"/>
+                    
+                
+                    
+                    <h4>Data distribution - fsp3</h4>
+                    
+                    <img src="images/3-Data_distribution_fsp3.png"/>
+                    
+                
+                    
+                    <h4>Data distribution - n_rotatable_bonds</h4>
+                    
+                    <img src="images/4-Data_distribution_n_rotatable_bonds.png"/>
+                    
+                
+                    
+                    <h4>Data distribution - tpsa</h4>
+                    
+                    <img src="images/5-Data_distribution_tpsa.png"/>
+                    
+                
+                    
+                    <h4>Data distribution - clogp</h4>
+                    
+                    <img src="images/6-Data_distribution_clogp.png"/>
+                    
+                
+                    
+                    <h4>Data distribution - formal_charge</h4>
+                    
+                    <img src="images/7-Data_distribution_formal_charge.png"/>
+                    
+                
+                    
+                    <h4>Data distribution - n_charged_atoms</h4>
+                    
+                    <img src="images/8-Data_distribution_n_charged_atoms.png"/>
+                    
+                
+                    
+                    <h4>Data distribution - refractivity</h4>
+                    
+                    <img src="images/9-Data_distribution_refractivity.png"/>
+                    
+                
+                    
+                    <h4>Data distribution - n_aromatic_rings</h4>
+                    
+                    <img src="images/10-Data_distribution_n_aromatic_rings.png"/>
+                    
+                
+                
+
+            
+            <footer>
+                <p>Generated by Auroris Data Curation</p>
+            </footer>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,286 @@
+ <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                background-color: #f9f9f9;
+            }
+            header {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            h1, h2, h3 {
+                margin-bottom: 10px;
+            }
+            p {
+                margin-bottom: 15px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            footer {
+                text-align: center;
+                margin-top: 20px;
+                color: #888;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                width: auto; /* ie8 */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Curation Report</h1>
+                <p>Time: 2024-05-16 01:36:37</p>
+                <p>Version: dev</p>
+            </header>
+            <!-- Sections -->
+            
+                <h2>MoleculeCuration</h2>
+
+                <!-- Logs -->
+                
+                <h3>Logs</h3>
+                <ul>
+                
+                    <li>New column added: MOL_smiles</li>
+                
+                    <li>New column added: MOL_molhash_id</li>
+                
+                    <li>New column added: MOL_molhash_id_no_stereo</li>
+                
+                    <li>New column added: MOL_num_stereoisomers</li>
+                
+                    <li>New column added: MOL_num_undefined_stereoisomers</li>
+                
+                    <li>New column added: MOL_num_defined_stereo_center</li>
+                
+                    <li>New column added: MOL_num_undefined_stereo_center</li>
+                
+                    <li>New column added: MOL_num_stereo_center</li>
+                
+                    <li>New column added: MOL_undefined_E_D</li>
+                
+                    <li>New column added: MOL_undefined_E/Z</li>
+                
+                    <li>Default `ecfp` fingerprint is used to compute the distributionin chemical space.</li>
+                
+                    <li>Molecules with undefined stereocenter detected: 186.</li>
+                
+                </ul>
+                
+
+                <!-- Images -->
+                
+                <h3>Images</h3>
+                
+                    
+                    <h4>Distribution in Chemical Space - ECFP</h4>
+                    
+                    <img src="images/Distribution_in_Chemical_Space_-_ECFP.png"/>
+                    
+                
+                    
+                    <h4>Molecules with undefined stereocenters</h4>
+                    
+                    <img src="images/Molecules_with_undefined_stereocenters.png"/>
+                    
+                    <h4>There are 186 molecules with undefined stereocenter(s).It's recommanded to use <auroris.curaion.action.StereoIsomerACDetection> andcheck the stereoisomers and activity cliffs in the dataset.</h4>
+                    
+                
+                
+
+            
+                <h2>ContinuousDistributionVisualization</h2>
+
+                <!-- Logs -->
+                
+
+                <!-- Images -->
+                
+                <h3>Images</h3>
+                
+                    
+                    <h4>Data distribution - LOG HLM_CLint (mL/min/kg)</h4>
+                    
+                    <img src="images/Data_distribution_-_LOG_HLM_CLint__mL_min_kg_.png"/>
+                    
+                
+                    
+                    <h4>Data distribution - LOG RLM_CLint (mL/min/kg)</h4>
+                    
+                    <img src="images/Data_distribution_-_LOG_RLM_CLint__mL_min_kg_.png"/>
+                    
+                
+                    
+                    <h4>Data distribution - LOG PLASMA PROTEIN BINDING (HUMAN) (% unbound)</h4>
+                    
+                    <img src="images/Data_distribution_-_LOG_PLASMA_PROTEIN_BINDING__HUMAN_____unbound_.png"/>
+                    
+                
+                    
+                    <h4>Data distribution - LOG PLASMA PROTEIN BINDING (RAT) (% unbound)</h4>
+                    
+                    <img src="images/Data_distribution_-_LOG_PLASMA_PROTEIN_BINDING__RAT_____unbound_.png"/>
+                    
+                
+                    
+                    <h4>Data distribution - LOG MDR1-MDCK ER (B-A/A-B)</h4>
+                    
+                    <img src="images/Data_distribution_-_LOG_MDR1-MDCK_ER__B-A_A-B_.png"/>
+                    
+                
+                    
+                    <h4>Data distribution - LOG SOLUBILITY PH 6.8 (ug/mL)</h4>
+                    
+                    <img src="images/Data_distribution_-_LOG_SOLUBILITY_PH_6.8__ug_mL_.png"/>
+                    
+                
+                
+
+            
+                <h2>OutlierDetection</h2>
+
+                <!-- Logs -->
+                
+                <h3>Logs</h3>
+                <ul>
+                
+                    <li>New column added: OUTLIER_LOG HLM_CLint (mL/min/kg)</li>
+                
+                    <li>Found 3 potential outliers with respect to the LOG HLM_CLint (mL/min/kg) column for review.</li>
+                
+                    <li>New column added: OUTLIER_LOG RLM_CLint (mL/min/kg)</li>
+                
+                    <li>Found 0 potential outliers with respect to the LOG RLM_CLint (mL/min/kg) column for review.</li>
+                
+                    <li>New column added: OUTLIER_LOG PLASMA PROTEIN BINDING (HUMAN) (% unbound)</li>
+                
+                    <li>Found 0 potential outliers with respect to the LOG PLASMA PROTEIN BINDING (HUMAN) (% unbound) column for review.</li>
+                
+                    <li>New column added: OUTLIER_LOG PLASMA PROTEIN BINDING (RAT) (% unbound)</li>
+                
+                    <li>Found 1 potential outliers with respect to the LOG PLASMA PROTEIN BINDING (RAT) (% unbound) column for review.</li>
+                
+                    <li>New column added: OUTLIER_LOG MDR1-MDCK ER (B-A/A-B)</li>
+                
+                    <li>Found 1 potential outliers with respect to the LOG MDR1-MDCK ER (B-A/A-B) column for review.</li>
+                
+                    <li>New column added: OUTLIER_LOG SOLUBILITY PH 6.8 (ug/mL)</li>
+                
+                    <li>Found 20 potential outliers with respect to the LOG SOLUBILITY PH 6.8 (ug/mL) column for review.</li>
+                
+                </ul>
+                
+
+                <!-- Images -->
+                
+                <h3>Images</h3>
+                
+                    
+                    <h4>Outlier detection - LOG HLM_CLint (mL/min/kg)</h4>
+                    
+                    <img src="images/Outlier_detection_-_LOG_HLM_CLint__mL_min_kg_.png"/>
+                    
+                
+                    
+                    <h4>Outlier detection - LOG RLM_CLint (mL/min/kg)</h4>
+                    
+                    <img src="images/Outlier_detection_-_LOG_RLM_CLint__mL_min_kg_.png"/>
+                    
+                
+                    
+                    <h4>Outlier detection - LOG PLASMA PROTEIN BINDING (HUMAN) (% unbound)</h4>
+                    
+                    <img src="images/Outlier_detection_-_LOG_PLASMA_PROTEIN_BINDING__HUMAN_____unbound_.png"/>
+                    
+                
+                    
+                    <h4>Outlier detection - LOG PLASMA PROTEIN BINDING (RAT) (% unbound)</h4>
+                    
+                    <img src="images/Outlier_detection_-_LOG_PLASMA_PROTEIN_BINDING__RAT_____unbound_.png"/>
+                    
+                
+                    
+                    <h4>Outlier detection - LOG MDR1-MDCK ER (B-A/A-B)</h4>
+                    
+                    <img src="images/Outlier_detection_-_LOG_MDR1-MDCK_ER__B-A_A-B_.png"/>
+                    
+                
+                    
+                    <h4>Outlier detection - LOG SOLUBILITY PH 6.8 (ug/mL)</h4>
+                    
+                    <img src="images/Outlier_detection_-_LOG_SOLUBILITY_PH_6.8__ug_mL_.png"/>
+                    
+                
+                
+
+            
+                <h2>StereoIsomerACDetection</h2>
+
+                <!-- Logs -->
+                
+                <h3>Logs</h3>
+                <ul>
+                
+                    <li>New column added: AC_LOG HLM_CLint (mL/min/kg)</li>
+                
+                    <li>Found no activity cliffs among stereoisomers with respect to the LOG HLM_CLint (mL/min/kg) column.</li>
+                
+                    <li>New column added: AC_LOG RLM_CLint (mL/min/kg)</li>
+                
+                    <li>Found no activity cliffs among stereoisomers with respect to the LOG RLM_CLint (mL/min/kg) column.</li>
+                
+                    <li>New column added: AC_LOG PLASMA PROTEIN BINDING (HUMAN) (% unbound)</li>
+                
+                    <li>Found no activity cliffs among stereoisomers with respect to the LOG PLASMA PROTEIN BINDING (HUMAN) (% unbound) column.</li>
+                
+                    <li>New column added: AC_LOG PLASMA PROTEIN BINDING (RAT) (% unbound)</li>
+                
+                    <li>Found no activity cliffs among stereoisomers with respect to the LOG PLASMA PROTEIN BINDING (RAT) (% unbound) column.</li>
+                
+                    <li>New column added: AC_LOG MDR1-MDCK ER (B-A/A-B)</li>
+                
+                    <li>Found no activity cliffs among stereoisomers with respect to the LOG MDR1-MDCK ER (B-A/A-B) column.</li>
+                
+                    <li>New column added: AC_LOG SOLUBILITY PH 6.8 (ug/mL)</li>
+                
+                    <li>Found no activity cliffs among stereoisomers with respect to the LOG SOLUBILITY PH 6.8 (ug/mL) column.</li>
+                
+                </ul>
+                
+
+                <!-- Images -->
+                
+
+            
+            <footer>
+                <p>Generated by Auroris Data Curation</p>
+            </footer>
+        </div>
+    </body>
+</html>

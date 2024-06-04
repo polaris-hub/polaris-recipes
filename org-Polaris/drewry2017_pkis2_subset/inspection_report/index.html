@@ -1,0 +1,368 @@
+ <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                background-color: #f9f9f9;
+            }
+            header {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            h1, h2, h3 {
+                margin-bottom: 10px;
+            }
+            p {
+                margin-bottom: 15px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+            th {
+                background-color: #f2f2f2;
+            }
+            footer {
+                text-align: center;
+                margin-top: 20px;
+                color: #888;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                width: auto; /* ie8 */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Curation Report</h1>
+                <p>Time: 2024-05-31 11:10:38</p>
+                <p>Version: dev</p>
+            </header>
+            <!-- Sections -->
+            
+                <h2>mol_curation</h2>
+
+                <!-- Logs -->
+                
+                <h3>Logs</h3>
+                <ul>
+                
+                    <li>New column added: MOL_smiles</li>
+                
+                    <li>New column added: MOL_molhash_id</li>
+                
+                    <li>New column added: MOL_molhash_id_no_stereo</li>
+                
+                    <li>New column added: MOL_num_stereoisomers</li>
+                
+                    <li>New column added: MOL_num_undefined_stereoisomers</li>
+                
+                    <li>New column added: MOL_num_defined_stereo_center</li>
+                
+                    <li>New column added: MOL_num_undefined_stereo_center</li>
+                
+                    <li>New column added: MOL_num_stereo_center</li>
+                
+                    <li>New column added: MOL_undefined_E_D</li>
+                
+                    <li>New column added: MOL_undefined_E/Z</li>
+                
+                    <li>Default `ecfp` fingerprint is used to visualize the chemical space.</li>
+                
+                    <li>Molecules with undefined stereocenter detected: 65.</li>
+                
+                </ul>
+                
+
+                <!-- Images -->
+                
+                <h3>Images</h3>
+                
+                    
+                    <h4>Distribution in Chemical Space - ECFP</h4>
+                    
+                    <img src="images/0-Distribution_in_Chemical_Space_ECFP.png"/>
+                    
+                
+                    
+                    <h4>Molecules with undefined stereocenters</h4>
+                    
+                    <img src="images/1-Molecules_with_undefined_stereocenters.png"/>
+                    
+                    <h4>There are 65 molecules with undefined stereocenter(s). It's recommended to use <auroris.curation.action.StereoIsomerACDetection> and check the stereoisomers and activity cliffs in the dataset.</h4>
+                    
+                
+                
+
+            
+                <h2>discretize</h2>
+
+                <!-- Logs -->
+                
+                <h3>Logs</h3>
+                <ul>
+                
+                    <li>New column added: CLS_EGFR</li>
+                
+                </ul>
+                
+
+                <!-- Images -->
+                
+                <h3>Images</h3>
+                
+                    
+                    <h4>EGFR</h4>
+                    
+                    <img src="images/2-EGFR.png"/>
+                    
+                
+                
+
+            
+                <h2>discretize</h2>
+
+                <!-- Logs -->
+                
+                <h3>Logs</h3>
+                <ul>
+                
+                    <li>New column added: CLS_KIT</li>
+                
+                </ul>
+                
+
+                <!-- Images -->
+                
+                <h3>Images</h3>
+                
+                    
+                    <h4>KIT</h4>
+                    
+                    <img src="images/3-KIT.png"/>
+                    
+                
+                
+
+            
+                <h2>discretize</h2>
+
+                <!-- Logs -->
+                
+                <h3>Logs</h3>
+                <ul>
+                
+                    <li>New column added: CLS_RET</li>
+                
+                </ul>
+                
+
+                <!-- Images -->
+                
+                <h3>Images</h3>
+                
+                    
+                    <h4>RET</h4>
+                    
+                    <img src="images/4-RET.png"/>
+                    
+                
+                
+
+            
+                <h2>discretize</h2>
+
+                <!-- Logs -->
+                
+                <h3>Logs</h3>
+                <ul>
+                
+                    <li>New column added: CLS_LOK</li>
+                
+                </ul>
+                
+
+                <!-- Images -->
+                
+                <h3>Images</h3>
+                
+                    
+                    <h4>LOK</h4>
+                    
+                    <img src="images/5-LOK.png"/>
+                    
+                
+                
+
+            
+                <h2>discretize</h2>
+
+                <!-- Logs -->
+                
+                <h3>Logs</h3>
+                <ul>
+                
+                    <li>New column added: CLS_SLK</li>
+                
+                </ul>
+                
+
+                <!-- Images -->
+                
+                <h3>Images</h3>
+                
+                    
+                    <h4>SLK</h4>
+                    
+                    <img src="images/6-SLK.png"/>
+                    
+                
+                
+
+            
+                <h2>outlier_detection</h2>
+
+                <!-- Logs -->
+                
+                <h3>Logs</h3>
+                <ul>
+                
+                    <li>New column added: OUTLIER_EGFR</li>
+                
+                    <li>Found 0 potential outliers with respect to the EGFR column for review.</li>
+                
+                    <li>New column added: OUTLIER_KIT</li>
+                
+                    <li>Found 0 potential outliers with respect to the KIT column for review.</li>
+                
+                    <li>New column added: OUTLIER_LOK</li>
+                
+                    <li>Found 0 potential outliers with respect to the LOK column for review.</li>
+                
+                    <li>New column added: OUTLIER_RET</li>
+                
+                    <li>Found 0 potential outliers with respect to the RET column for review.</li>
+                
+                    <li>New column added: OUTLIER_SLK</li>
+                
+                    <li>Found 0 potential outliers with respect to the SLK column for review.</li>
+                
+                </ul>
+                
+
+                <!-- Images -->
+                
+                <h3>Images</h3>
+                
+                    
+                    <h4>Outlier detection - EGFR</h4>
+                    
+                    <img src="images/7-Outlier_detection_EGFR.png"/>
+                    
+                
+                    
+                    <h4>Outlier detection - KIT</h4>
+                    
+                    <img src="images/8-Outlier_detection_KIT.png"/>
+                    
+                
+                    
+                    <h4>Outlier detection - LOK</h4>
+                    
+                    <img src="images/9-Outlier_detection_LOK.png"/>
+                    
+                
+                    
+                    <h4>Outlier detection - RET</h4>
+                    
+                    <img src="images/10-Outlier_detection_RET.png"/>
+                    
+                
+                    
+                    <h4>Outlier detection - SLK</h4>
+                    
+                    <img src="images/11-Outlier_detection_SLK.png"/>
+                    
+                
+                
+
+            
+                <h2>ac_stereoisomer</h2>
+
+                <!-- Logs -->
+                
+                <h3>Logs</h3>
+                <ul>
+                
+                    <li>New column added: AC_CLS_EGFR</li>
+                
+                    <li>Found 2 activity cliffs among stereoisomers with respect to the CLS_EGFR column.</li>
+                
+                    <li>The molecule index are : 562 ,563</li>
+                
+                    <li>New column added: AC_CLS_KIT</li>
+                
+                    <li>Found no activity cliffs among stereoisomers with respect to the CLS_KIT column.</li>
+                
+                    <li>New column added: AC_CLS_LOK</li>
+                
+                    <li>Found no activity cliffs among stereoisomers with respect to the CLS_LOK column.</li>
+                
+                    <li>New column added: AC_CLS_RET</li>
+                
+                    <li>Found no activity cliffs among stereoisomers with respect to the CLS_RET column.</li>
+                
+                    <li>New column added: AC_CLS_SLK</li>
+                
+                    <li>Found 2 activity cliffs among stereoisomers with respect to the CLS_SLK column.</li>
+                
+                    <li>The molecule index are : 195 ,196</li>
+                
+                </ul>
+                
+
+                <!-- Images -->
+                
+                <h3>Images</h3>
+                
+                    
+                    <h4>Activity shifts among stereoisomers  - CLS_EGFR</h4>
+                    
+                    <img src="images/12-Activity_shifts_among_stereoisomers__CLS_EGFR.png"/>
+                    
+                
+                    
+                    <h4>Activity shifts among stereoisomers  - CLS_SLK</h4>
+                    
+                    <img src="images/13-Activity_shifts_among_stereoisomers__CLS_SLK.png"/>
+                    
+                
+                
+
+            
+            <footer>
+                <p>Generated by Auroris Data Curation</p>
+            </footer>
+        </div>
+    </body>
+</html>
