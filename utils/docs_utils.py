@@ -37,6 +37,8 @@ def visualize_split_chemspace(mols, train_test_dict):
                 "test",
             ],
             "alpha": 0.9,
+            "edgecolor": "none",
+            "palette": "Set2",
         },
     )
 
