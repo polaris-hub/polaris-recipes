@@ -32,7 +32,6 @@ class GCP_HTMLBroadcaster(HTMLBroadcaster):
     ):
         super().__init__(report, destination, embed_images)
 
-
     def _img_to_html_src(self, path: str):
         """
         Convert a path to a corresponding `src` attribute for an `<img />` tag.
@@ -56,4 +55,3 @@ def save_image(image: ImageType, path: str):
     if protocol == "gs":
         return path.replace("gs://", "https://storage.googleapis.com/")
     return path
-    
