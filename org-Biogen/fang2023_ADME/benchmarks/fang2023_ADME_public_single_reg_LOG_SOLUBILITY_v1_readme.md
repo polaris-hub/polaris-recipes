@@ -2,9 +2,10 @@
 
 ## Background
 
-The goal of accessing ADME properties is to understand how a potential drug candidate interacts with the human body, including absorption, distribution, metabolism, and excretion. This knowledge is crucial for evaluating efficacy, safety, and clinical potential, guiding drug development for optimal therapeutic outcomes. Fang et al. 2023 has disclosed DMPK datasets collected over 20 months across six ADME in vitro endpoints, which are human and rat liver microsomal stability, MDR1-MDCK efflux ratio, solubility, and human and rat plasma protein binding. The dataset contains 885 to 3087 measures for the corresponding endpoints. The compounds show the chemical diversity across all ranges of the endpoints which are microsomal stability, plasma protein binding, permeability, and solubility.
+The goal of assessing ADME properties is to understand how a potential drug candidate interacts with the human body, encompassing absorption, distribution, metabolism, and excretion. This knowledge is crucial for evaluating the drug's efficacy, safety, and clinical potential, ultimately guiding drug development towards optimal therapeutic outcomes. [Fang et al. (2023)](https://doi.org/10.1021/acs.jcim.3c00160) disclosed DMPK datasets collected over 20 months, covering six ADME in vitro endpoints: human and rat liver microsomal stability, MDR1-MDCK efflux ratio, solubility, and human and rat plasma protein binding. The dataset includes between 885 and 3,087 measurements for each corresponding endpoint.
+
 ## Benchmarking
-**The goal** of this benchmark is to perform a single task, which is to the best predictive model for solubility. 
+**The goal** of this benchmark is to perform a single task, which is to have the best predictive model for solubility. 
 
 
 ## Description of readout 
