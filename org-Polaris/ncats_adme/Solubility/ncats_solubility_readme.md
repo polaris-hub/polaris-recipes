@@ -11,7 +11,7 @@ Aqueous solubility is one of the most important properties in drug discovery, as
 Image is from [here](https://www.emdmillipore.com/CA/en/product/MultiScreenHTS-PCF-Filter-Plates-for-Solubility-Assays,MM_NF-C8875?ReferrerURL=https%3A%2F%2Fwww.google.com%2F).
 
 
-## Description of readout:
+## Description of readout
 - **PUBCHEM_ACTIVITY_OUTCOME**: Corresponds to the phenotype observed. For all compounds with Moderate/High phenotype, PUBCHEM_ACTIVITY_OUTCOME is "active" (class = 1). For all        compounds with Low phenotype, PUBCHEM_ACTIVITY_OUTCOME is "inactive" (class = 0).
 - **PUBCHEM_ACTIVITY_SCORE**: Whole number in Solubility (ug/mL) of the compound.
 - **PHENOTYPE**: Indicates type of activity observed: 0-10: Low Solubility (class = 0) >10: Moderate/High Solubility (class = 1)
