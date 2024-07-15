@@ -12,14 +12,13 @@ The goal of assessing ADME properties is to understand how a potential drug cand
 - **Readouts**: `LOG_SOLUBILITY`
 - **Bioassay readout**: Solubility
 - **Optimization objective**: Higher value
-- **Number of data points**: train:  1578, test:  400
 
 
 ## Molecule data resource:
 **Reference**: https://doi.org/10.1021/acs.jcim.3c00160
 
 ## Train/test split
-In this benchmark set, the same train/test sets in the fang2023 paper were used for the 6 endpoints human and rat liver microsomal stability, MDR1-MDCK efflux ratio, solubility, and human and rat plasma protein binding, respectively. 
+In this benchmark set, the same train/test sets as in the fang2023 paper were used for the 6 endpoints human and rat liver microsomal stability, MDR1-MDCK efflux ratio, solubility, and human and rat plasma protein binding, respectively. 
 See more details at https://github.com/molecularinformatics/Computational-ADME/tree/main/MPNN.
 
 **Distribution of the train/test in the chemical space**

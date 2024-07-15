@@ -9,7 +9,6 @@ The goal of assessing ADME properties is to understand how a potential drug cand
 - **Readouts**: `LOG HLM_CLint (mL/min/kg)`, `LOG RLM_CLint (mL/min/kg)`, `LOG HPPB (mL/min/kg)`, `LOG RPPB (mL/min/kg)`, `LOG_MDR1-MDCK_ER`, `LOG_SOLUBILITY`
 - **Bioassay readout**: Intrinsic clearance
 - **Optimization objective**: Higher value
-- **Number of data points**: train: 2816 test: 705
 
 ## Benchmarking
 **The goal** of this benchmark is to perform multitask learning and select the best models for predicting six ADME endpoints altogether.

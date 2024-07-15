@@ -12,7 +12,6 @@ The goal of assessing ADME properties is to understand how a potential drug cand
 - **Readouts**: `LOG HPPB (mL/min/kg)`
 - **Bioassay readout**: Human plasma protein binding 
 - **Optimization objective**: Lower value
-- **Number of data points**: train: 2218 test: 559
 
 ## Molecule data resource: 
 **Reference**: https://doi.org/10.1021/acs.jcim.3c00160

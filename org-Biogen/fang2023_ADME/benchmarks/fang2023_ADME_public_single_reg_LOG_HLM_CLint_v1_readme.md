@@ -12,7 +12,6 @@ The goal of assessing ADME properties is to understand how a potential drug cand
 - **Readouts**: `LOG HLM_CLint (mL/min/kg)`
 - **Bioassay readout**: Intrinsic clearance
 - **Optimization objective**: Higher value
-- **Number of data points**: train: 2229, test:  575
 
 ## Molecule data resource:
 **Reference**: https://doi.org/10.1021/acs.jcim.3c00160
