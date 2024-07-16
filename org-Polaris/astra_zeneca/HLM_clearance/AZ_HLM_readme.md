@@ -4,7 +4,7 @@ This is part of a release of experimental data determined at AstraZeneca on a se
 ## Assay Information
 Hepatic metabolic stability is a key pharmacokinetic parameter in drug discovery. Metabolic stability is usually assessed in microsomal fractions and only the best compounds progress in the drug discovery process.
 
-![image.png](attachment:image.png)
+![image.png](https://media.springernature.com/lw685/springer-static/image/art%3A10.1007%2Fs00216-016-9929-6/MediaObjects/216_2016_9929_Fig1_HTML.gif)
 
 Image is from [this paper](https://link.springer.com/article/10.1007/s00216-016-9929-6). Biologically active compounds can be transformed or destroyed by the action of enzymes in the liver. Microsomes are small membrane bubbles (vesicles) that come from a fragmented cell membrane, and can be used as a proxy for how well a drug survives a trip through the liver.
 
