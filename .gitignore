@@ -11,3 +11,6 @@ readme/*/*
 *.pyc
 
 04_ADME_NCATS/data/cyp2d6_veith.tab
+
+*.sdf
+*.zarr

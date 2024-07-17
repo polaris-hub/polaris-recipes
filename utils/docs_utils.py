@@ -20,8 +20,24 @@ def visualize_split_chemspace(mols, train_test_dict):
     labels = []
     for k, v in train_test_dict.items():
         split = np.tile(np.nan, (len(X),)).astype(str)
-        split[v[0]] = "train"
-        split[v[1]] = "test"
+        if len(v) == 2:
+            split[v[0]] = "train"
+            split[v[1]] = "test"
+            hue_order = [
+                "nan",
+                "train",
+                "test",
+            ]
+        elif len(v) == 3:
+            split[v[0]] = "train"
+            split[v[2]] = "val"
+            split[v[1]] = "test"
+            hue_order = [
+                "nan",
+                "train",
+                "val",
+                "test",
+            ]
         splits.append(split)
         labels.append(k)
 
@@ -31,11 +47,7 @@ def visualize_split_chemspace(mols, train_test_dict):
         labels=labels,
         umap_kwargs={},
         plot_kwargs={
-            "hue_order": [
-                "nan",
-                "train",
-                "test",
-            ],
+            "hue_order": hue_order,
             "alpha": 0.9,
             "edgecolor": "none",
             "palette": "Set2",
