@@ -7,10 +7,12 @@ The cell lines VCAP and MCF7 were selected since they have a higher number of un
 
 
 ## Assay information
+L1000 is a gene-expression profiling assay based on the direct measurement of a reduced representation of the transcriptome and computational inference of the portion of the transcriptome not explicitly measured. The number of landmark transcripts whose abundance is measured directly is approximately one thousand. Eighty additional invariant transcripts are also explicitly measured to enable quality control, scaling and normalization. Measurements of transcript abundance are made with a combination of a coupled ligase detection and polymerase chain reaction, optically-addressed microspheres, and a flow-cytometric detection system. 
 
+For more information, see the [LINCS User Guide](https://docs.google.com/document/d/1q2gciWRhVCAAnlvF2iRLuJ7whrGP6QjpsCMq1yWz7dU/edit#heading=h.usef9o7fuux3).
+
+Reference: https://www.cell.com/cell/fulltext/S0092-8674(17)31309-0
 
 ## Description of readout:
-
-
-## Data resource
+"Level 5" data composed of the cleaned-up data converted to z-scores, and filtered to keep only chemical perturbagens.
 
