@@ -7,9 +7,5 @@ Computed geometric, energetic, electronic, and thermodynamic properties for 134k
 ## Benchmarking
 **The goal** of this benchmark is to have the best predictive model for atomic coordinates and calculated properties.
 
-## Description of readout:
-- Readouts: MSE
-- Optimization objective: Lower value
-
 ## Data resource
 Reference: [Quantum chemistry structures and properties of 134 kilo molecules](https://www.nature.com/articles/sdata201422)

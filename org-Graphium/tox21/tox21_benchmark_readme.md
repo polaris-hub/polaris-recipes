@@ -9,10 +9,6 @@ In qHTS (quantitative high throughput screens), many thousands of compounds are 
 ## Benchmarking
 **The goal** of this benchmark is to have the best predictive model for classifying molecules as having activity against toxicity-related proteins: nuclear receptors and stress response indicators.
 
-## Description of readout:
-- Readouts: MSE
-- Optimization objective: Lower value
-
 ## Data resource
 Reference: [Improving the human hazard characterization of chemicals: a Tox21 update.](https://europepmc.org/article/MED/23603828)
 
