@@ -1,0 +1,23 @@
+Name,Dataset,Unit,Size,Task,Metric,Dataset Split,Reference
+caco2_wang,Caco2,cm/s,906,Regression,MAE,Scaffold,https://pubmed.ncbi.nlm.nih.gov/27018227/
+hia_hou,HIA,%,578,Binary,AUROC,Scaffold,https://pubmed.ncbi.nlm.nih.gov/17238266/
+pgp_broccatelli,Pgp,%,"1,212",Binary,AUROC,Scaffold,https://pubs.acs.org/doi/abs/10.1021/jm101421d
+bioavailability_ma,Bioav,%,640,Binary,AUROC,Scaffold,https://doi.org/10.1016/j.jpba.2008.03.023
+lipophilicity_astrazeneca,Lipo,log-ratio,"4,200",Regression,MAE,Scaffold,https://doi.org/10.6019/chembl3301361
+solubility_aqsoldb,AqSol,log mol/L,"9,982",Regression,MAE,Scaffold,https://doi.org/10.1038/s41597-019-0151-1
+bbb_martins,BBB,%,"1,975",Binary,AUROC,Scaffold,https://pubmed.ncbi.nlm.nih.gov/22612593/
+ppbr_az,PPBR,%,"1,797",Regression,MAE,Scaffold,https://doi.org/10.6019/chembl3301361
+vdss_lombardo,VDss,L/kg,"1,130",Regression,Spearman,Scaffold,https://pubs.acs.org/doi/abs/10.1021/acs.jcim.6b00044?casa_token=SQhDZjizB08AAAAA:zrP4aW5361rH880nm_vVroPqBxjZU8wy0Yb6a0cM7Qvap1aeLQSo0KS3n79wIW0xa64n3Z3V1-lBaQpN
+cyp2c9_veith,CYP2C9 Inhibition,%,"12,092",Binary,AUPRC,Scaffold,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2783980/
+cyp2d6_veith,CYP2D6 Inhibition,%,"13,130",Binary,AUPRC,Scaffold,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2783980/
+cyp3a4_veith,CYP3A4 Inhibition,%,"12,328",Binary,AUPRC,Scaffold,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2783980/
+cyp2c9_substrate_carbonmangels,CYP2C9 Substrate,%,666,Binary,AUPRC,Scaffold,https://onlinelibrary.wiley.com/doi/abs/10.1002/minf.201100069?casa_token=an2_FKO2WnMAAAAA:d-W7F_Ukq1ArtZoSaqh96zcwyAQlVtzc9IR12M9WltU8U0iJJW_BLINGNbC9qN7dk7mFmsNIy1bVcZdt
+cyp2d6_substrate_carbonmangels,CYP2D6 Substrate,%,664,Binary,AUPRC,Scaffold,https://onlinelibrary.wiley.com/doi/abs/10.1002/minf.201100069?casa_token=an2_FKO2WnMAAAAA:d-W7F_Ukq1ArtZoSaqh96zcwyAQlVtzc9IR12M9WltU8U0iJJW_BLINGNbC9qN7dk7mFmsNIy1bVcZdt
+cyp3a4_substrate_carbonmangels,CYP3A4 Substrate,%,667,Binary,AUROC,Scaffold,https://onlinelibrary.wiley.com/doi/abs/10.1002/minf.201100069?casa_token=an2_FKO2WnMAAAAA:d-W7F_Ukq1ArtZoSaqh96zcwyAQlVtzc9IR12M9WltU8U0iJJW_BLINGNbC9qN7dk7mFmsNIy1bVcZdt
+half_life_obach,Half Life,hr,667,Regression,Spearman,Scaffold,http://dmd.aspetjournals.org/content/36/7/1385.short?casa_token=9RLY3ZV5uqwAAAAA:j6LPQLnRLDOdzsVkew-nT5eIk9i_6LfkRf6FaBkIS1UKDe7oqP2NmymGeSRsGYigtTQXVHgXyoek
+clearance_hepatocyte_az,CL-Hepa,uL.min-1.(10^6 cells)-1,"1,020",Regression,Spearman,Scaffold,https://doi.org/10.6019/chembl3301361
+clearance_microsome_az,CL-Micro,mL.min-1.g-1,"1,102",Regression,Spearman,Scaffold,https://doi.org/10.6019/chembl3301361
+ld50_zhu,LD50,log(1/(mol/kg)),"7,385",Regression,MAE,Scaffold,https://pubs.acs.org/doi/abs/10.1021/tx900189p?casa_token=vfBbuxuUCqEAAAAA:YAcI0r4Z3rtlRYP_l5H8OlTfdUh3DVlO6ws_h1NkhpaXH3-NrdI2-s5ghWWJbxfPQw-KhQIAwMi1Di3v
+herg,hERG,%,648,Binary,AUROC,Scaffold,https://pubs.acs.org/doi/abs/10.1021/tx900189p?casa_token=vfBbuxuUCqEAAAAA:YAcI0r4Z3rtlRYP_l5H8OlTfdUh3DVlO6ws_h1NkhpaXH3-NrdI2-s5ghWWJbxfPQw-KhQIAwMi1Di3v
+ames,Ames,%,"7,255",Binary,AUROC,Scaffold,https://pubs.acs.org/doi/abs/10.1021/ci300400a?casa_token=A86ksblef0kAAAAA:2kLxP4j2NOigeBsSqUb8C9ThZLVBR_Ztc8gJg_HhyLCRtZF-MfMMyq4bIwhMlH0MyJXZuWkFXXrGqiMR
+dili,DILI,%,475,Binary,AUROC,Scaffold,https://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00238
