@@ -1,8 +1,8 @@
 body:
-  - type: markdown
-    attributes:
-      value: |
-        Thank you for taking the time to submit your Polaris dataset for review!
+- type: markdown
+  attributes:
+    value: |
+      Thank you for taking the time to submit your Polaris dataset for review!
   - type: input
     id: polaris-link
     attributes:
