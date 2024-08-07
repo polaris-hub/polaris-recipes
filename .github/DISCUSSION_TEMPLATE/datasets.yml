@@ -1,0 +1,27 @@
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to submit your Polaris dataset for review!
+  - type: input
+    id: polaris-link
+    attributes:
+      label: Polaris Link
+      description: Please share the link to your public dataset on Polaris.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Have you completed the following?
+      description: "The [Polaris Dataset class](https://github.com/polaris-hub/polaris/blob/main/polaris/dataset/_dataset.py#L45) includes dedicated fields to share important metadata about a dataset. Please confirm that you shared at least the following information:"
+      options:
+        - label: The README documenting the underlying data generation process and its relevance to drug discovery.
+          required: true
+        - label: The `source` field documenting where the data originates from (e.g. PDBBind, Chembl, a DOI, ...). 
+          required: true
+        - label: A `curation_reference` that links to a public, reproducible piece of code to recreate the dataset from the source data. We recommend using [Auroris](https://github.com/polaris-hub/auroris) for this.
+          required: true
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Anything else we should know?
+      description: Please share any additional context you think may be important for the vetting process.
