@@ -10,14 +10,14 @@ body:
       description: Please share the link to your public dataset on Polaris.
     validations:
       required: true
- - type: textarea
+  - type: textarea
     id: readme
     attributes:
       label: README
       description: Please share more information about the data generation process and the relevance of this dataset to drug discovery.
     validations:
       required: true
- - type: input
+  - type: input
     id: dataset-source
     attributes:
       label: Dataset Source
