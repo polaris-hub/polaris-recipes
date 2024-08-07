@@ -8,17 +8,35 @@ body:
     attributes:
       label: Polaris Link
       description: Please share the link to your public dataset on Polaris.
+    validations:
+      required: true
+ - type: textarea
+    id: readme
+    attributes:
+      label: README
+      description: Please share more information about the data generation process and the relevance of this dataset to drug discovery.
+    validations:
+      required: true
+ - type: input
+    id: dataset-source
+    attributes:
+      label: Dataset Source
+      description: Please share a reference to the source (e.g. PDBBind, Chembl, a DOI, ...). 
+    validations:
+      required: true
+  - type: input
+    id: dataset-curation
+    attributes:
+      label: Dataset Curation
+      description: Please share a reference to a public, reproducible piece of code to recreate the dataset from the source data.
+    validations:
+      required: true
   - type: checkboxes
     id: checks
     attributes:
-      label: Have you completed the following?
-      description: "The [Polaris Dataset class](https://github.com/polaris-hub/polaris/blob/main/polaris/dataset/_dataset.py#L45) includes dedicated fields to share important metadata about a dataset. Please confirm that you shared at least the following information:"
+      description: The [Polaris Dataset class](https://github.com/polaris-hub/polaris/blob/main/polaris/dataset/_dataset.py#L45) includes dedicated fields to share the above information with the community.
       options:
-        - label: The README documenting the underlying data generation process and its relevance to drug discovery.
-          required: true
-        - label: The `source` field documenting where the data originates from (e.g. PDBBind, Chembl, a DOI, ...). 
-          required: true
-        - label: A `curation_reference` that links to a public, reproducible piece of code to recreate the dataset from the source data. We recommend using [Auroris](https://github.com/polaris-hub/auroris) for this.
+        - label: I confirm that I filled out the `readme`, `source` and `curation_reference` fields for my Polaris dataset.
           required: true
   - type: textarea
     id: additional-context
