@@ -4,26 +4,21 @@ The Polaris datasets and benchmarks recipes.
 
 This repository is a central hub for the storage, organization, and collaboration of notebooks essential for data curation and design benchmarking tasks listed in the [Polaris Hub](https://polarishub.io). The [Auroris](https://github.com/polaris-hub/auroris) package was used to curate the data.
 
-## Basic steps of data curation and processing
-Most of the datasets in Polaris hub were curated by the steps below:
+## Datasets 101 - Basic Checks
+A little bit of effort spent on dataset curation can go a long way to improving your models performance in real-world settings. Below, we outline some high level checks that you should be applying to any dataset you work with in drug discovery.
 
-**Step 1** - Curate the chemistry information
-  - Clean the molecules by performing molecule sanitization and fixing, standardization of molecules, and salts/solvents removal.
-  - Detect the stereochemistry information in the molecules. Such as undefined stereocenters and information. It's crucial in the case of the activity cliff among the stereoisomers.
+**Step 1** - Check that the dataset is representative of applications in real-world drug discovery.
+  - Creators of the dataset must be able to explain the data generation process and describe the specific applications of this dataset in drug discovery.
+  - Take for example the FreeSolv dataset in MoleculeNet mentioned in [Pat Walter’s blog](https://practicalcheminformatics.blogspot.com/2023/08/we-need-better-benchmarks-for-machine.html). Although the dataset was designed to evaluate molecular dynamics methods, it has turned into a generic property prediction task for the free energy of solvation. However, this quantity used in isolation is not particularly useful.
 
-
-**Step 2** - Curate the measured values
-  - Identify the compounds which have multiple measures in the dataset. The identification of the repeated molecules is defined by `datamol.hash_mol` including stereochemistry information.
-  - Verify the data resource and remove the dubious data points which are significant different or in different classes in case of categorical data. Compute the average of the rest of the duplicated molecules.
-  - Detect potential outliers of the dataset. Verify the data resource and remove the dubious data points.
-  - Convert the continuous values based on provided threshold values to classification tasks.
-  - Detect activity cliff between the stereoisomers. Those isomers and their bioactivity values can be removed/masked from dataset if the downstream molecule representation is not able to differentiate the stereoisomers.
+**Step 2** - Check that the dataset stems from a consistent, original source
+  - Creators of the dataset must share references to where the dataset was originally sourced from. If data is aggregated from multiple sources or preprocessed in some way, this process needs to be transparent and the rationale should be well documented. Blindly combining datasets can [introduce significant noise](https://pubs.acs.org/doi/10.1021/acs.jcim.4c00049).
+  -  Some examples that violate this rule include datasets like [tdcommons/solubility-aqsoldb](https://polarishub.io/datasets/tdcommons/solubility-aqsoldb) and [tdcommons/bbb-martins](https://polarishub.io/datasets/tdcommons/bbb-martins). In both cases, data has been collected from multiple sources yet there are no references to primary literature.
 
 
-**Step 3** - Visual inspection
-  - Assess molecular diversity and distribution in the chemical space. This can guide the decision on which splitting approach to employ. 
-  - Visualize the distribution of bioactivity values. It's useful to examine whether it's meaningful to convert to classification task.
-  - Check molecules that contain undesired characters.
+**Step 3** - Check that the dataset does not contain obvious errors or ambiguous data
+  - Creators of the dataset should check for obvious duplicates, invalid data, or ambiguous data. You should also visualize the data distributions to highlight potential outliers.
+  - For example, [tdcommons/bbb-martins](https://polarishub.io/datasets/tdcommons/bbb-martins) violates this rule as it contains many duplicate structures. 
 
-## Related links
-The data curation philosophy and guildelines can be found in [Polaris Hub](https://polarishub.io/pages/documentation)
+## Example notebooks
+If you're looking for examples of curated datasets, we recommended checking out the notebooks for the [adme-fang](https://github.com/polaris-hub/polaris-recipes/blob/disclaimer/org-Biogen/fang2023_ADME/01_polaris_adme-fang_data_curation.ipynb) and [pkis2](https://github.com/polaris-hub/polaris-recipes/tree/disclaimer/org-Polaris/drewry2017_pkis2_subset) datasets.
