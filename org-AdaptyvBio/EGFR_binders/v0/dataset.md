@@ -15,12 +15,6 @@ Epidermal Growth Factor Receptor (EGFR) is a transmembrane protein that plays a 
 ### Binding protein designs
 This dataset contains 202 designed EGFR-binding protein sequences, along with experimental binding affinity results tested by the AdaptyvBio team.
 
-## Benchmark description
-
-This retrospective benchmark evaluates protein design methods by challenging participants to design a binding protein for the extracellular domain of EGFR, a cancer-associated drug target. A set of 202 previously designed protein sequences, along with their experimental binding affinities (binary labels), is available for testing. 
-
-`Balenced Accuracy` is used to evaluate the performance of design methods on both binders and non-binders. 
-
 
 ## Reference: 
 - https://design.adaptyvbio.com/
