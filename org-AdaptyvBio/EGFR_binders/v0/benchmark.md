@@ -17,10 +17,15 @@ This dataset contains 202 designed EGFR-binding protein sequences, along with ex
 
 ## Benchmark description
 
-This retrospective benchmark evaluates protein design methods by challenging participants to design a binding protein for the extracellular domain of EGFR, a cancer-associated drug target. A set of 202 previously designed protein sequences, along with their experimental binding affinities (binary labels), is available for testing. 
+This retrospective benchmark evaluates protein design methods by challenge participants to design a binding protein for the extracellular domain of EGFR, a cancer-associated drug target. A set of 202 previously designed protein sequences, along with their experimental binding affinities (binary labels), is available for testing. 
 
 `Balanced accuracy` is used to evaluate the performance of design methods in differentiating between binders and non-binders.
+
+## Additional notes
+- `Cetuximab_scFv` was used as the positive control of the binding assay.
+- `ahmedsameh-Q3` and `ahmedsameh-yy2` were disqualified from the competition due to these similarity levels to the known EGFR-binder sequence. They are kpet in this benchmark solely for evaluation purposes.
 
 ## Reference: 
 - https://design.adaptyvbio.com/
 - https://foundry.adaptyvbio.com/egfr_design_competition
+- https://github.com/adaptyvbio/egfr_competition_1
