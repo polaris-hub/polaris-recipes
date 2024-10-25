@@ -22,7 +22,7 @@ This retrospective benchmark evaluates protein design methods by challenge parti
 `Balanced accuracy` is used to evaluate the performance of design methods in differentiating between binders and non-binders.
 
 ## Additional notes
-- `Cetuximab_scFv` was used as the positive control of the binding assay.
+- `Cetuximab_scFv` and `P01133-971-1023` were used as the positive control of the binding assay.
 - `ahmedsameh-Q3` and `ahmedsameh-yy2` were disqualified from the competition due to these similarity levels to the known EGFR-binder sequence. They are kpet in this benchmark solely for evaluation purposes.
 - The two weak binders `alecl-Sequence1` and `alan.blakely-design:5 n:6|mpnn:1.247|plddt:0.825|ptm:0.709|pae:10.151|rmsd:3.535` are classified as non-binders in this benchmark.
 
