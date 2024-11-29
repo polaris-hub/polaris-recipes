@@ -39,8 +39,22 @@ body:
       options:
         - label: I confirm that I filled out at least the `readme`, `source` and `curation_reference` fields for my Polaris dataset.
           required: true
+    - type: checkboxes
+    id: check_guideline
+    attributes:
+      label: Dataset guideline
+      description: The [Polaris Datasets 101](https://polarishub.io/datasets-101) outlines basic checks that we encourage all members of the community to follow when curating or working with drug discovery datasets.
+      options:
+        - label: I confirm that I am aware of the dataset guidelines and have complied with them to the fullest extent possible.
+          required: true
   - type: textarea
     id: additional-context
     attributes:
       label: Anything else we should know?
       description: Please share any additional context you think may be important for the vetting process.
+  - type: textarea
+    id: external-reviewer
+    attributes:
+      label: External reviewers?
+      description: Please share the contact details of anyone outside the current project team whom you would like to review this dataset? The Polaris team will contact them directly.
+
