@@ -1,5 +1,5 @@
 
-![molprop](https://storage.googleapis.com/polaris-public/icons/icons8-bear-100-Molprop.png)
+![molprop](https://fs.polarishub.io/public/icons/icons8-bear-100-Molprop.png)
 
 ## Background
 
@@ -23,7 +23,7 @@ The objective is to comprehend the proficiency of a model in predicting these 'e
 The objective is to comprehend the proficiency of a model in predicting these 'easy' properties. In order to select the predictive models which is able to generalize to new chemical space, a scaffold split is used to generate trian/test sets. 
 
 **Distribution of the train/test in the chemical space**
-![image](https://storage.googleapis.com/polaris-public/datasets/molprop/figures/molprop250k_v1_tsne_scaffold_split.png)
+![image](https://fs.polarishub.io/public/datasets/molprop/figures/molprop250k_v1_tsne_scaffold_split.png)
 
 
 ## Related links
