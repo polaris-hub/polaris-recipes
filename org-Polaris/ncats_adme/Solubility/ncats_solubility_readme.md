@@ -6,7 +6,7 @@ Data that were used for developing the models are made publicly accessible by de
 ## Assay Information
 Aqueous solubility is one of the most important properties in drug discovery, as it has profound impact on various drug properties, including biological activity, pharmacokinetics (PK), toxicity, and in vivo efficacy. Both kinetic and thermodynamic solubilities are determined during different stages of drug discovery and development. One way of assessing solubility is as follows:
 
-![image.png](https://fs.polarishub.io/public/readme/datasets/img/04_02_ADME_NCATS_Solubility_data_curation.jpeg)
+![image.png](https://storage.polarishub.io/public/readme/datasets/img/04_02_ADME_NCATS_Solubility_data_curation.jpeg)
 
 Image is from [here](https://www.emdmillipore.com/CA/en/product/MultiScreenHTS-PCF-Filter-Plates-for-Solubility-Assays,MM_NF-C8875?ReferrerURL=https%3A%2F%2Fwww.google.com%2F).
 

@@ -19,7 +19,7 @@ Cytochrome P450 (CYP) enzymes are membrane-bound hemeproteins that play a key ro
 In this benchmark set, the train/test sets in the above paper are used. 
 
 **Distribution of the train/test in the chemical space**
-![image](https://fs.polarishub.io/public/polaris-recipes/org-novartis/CYP/figures/paper_split_chemspace.png)
+![image](https://storage.polarishub.io/public/polaris-recipes/org-novartis/CYP/figures/paper_split_chemspace.png)
 
 
 ## Related links

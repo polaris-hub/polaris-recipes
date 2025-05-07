@@ -7,7 +7,7 @@ The PoseBusters dataset set is a new set of carefully-selected publicly-availabl
 
 ## Data source
 - Orignial: https://zenodo.org/records/8278563
-- Polaris: https://fs.polarishub.io/public/polaris-recipes/org-polaris/posebusters/posebusters_paper_data/posebusters_benchmark_set
+- Polaris: https://storage.polarishub.io/public/polaris-recipes/org-polaris/posebusters/posebusters_paper_data/posebusters_benchmark_set
 
 ## Other links
 - Github: https://github.com/maabuu/posebusters/tree/main

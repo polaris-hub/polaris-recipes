@@ -1,4 +1,4 @@
-![ADME](https://fs.polarishub.io/public/icons/icons8-whale-96-ADME.png) 
+![ADME](https://storage.polarishub.io/public/icons/icons8-whale-96-ADME.png) 
 
 ## Background
 
@@ -22,7 +22,7 @@ In this benchmark set, the same train/test sets as in the fang2023 paper were us
 See more details at https://github.com/molecularinformatics/Computational-ADME/tree/main/MPNN.
 
 **Distribution of the train/test in the chemical space**
-![image](https://fs.polarishub.io/public/datasets/ADME/fang2023/figures/fang2023_ADME_public_v1_hPPB_tsne_fang2023split.png)
+![image](https://storage.polarishub.io/public/datasets/ADME/fang2023/figures/fang2023_ADME_public_v1_hPPB_tsne_fang2023split.png)
 
 ## Related links
 The full curation and creation process is documented [here](https://github.com/polaris-hub/polaris-recipes/blob/main/01_ADME).

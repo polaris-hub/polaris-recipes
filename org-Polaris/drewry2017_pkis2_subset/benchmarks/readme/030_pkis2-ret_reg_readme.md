@@ -1,4 +1,4 @@
-![molprop](https://fs.polarishub.io/public/icons/icons8-fox-60-kinases.png)
+![molprop](https://storage.polarishub.io/public/icons/icons8-fox-60-kinases.png)
 
 ### Background
 **RET (Rearranged during Transfection)** is a proto-oncogene that codes for a receptor tyrosine kinase. This means it produces a protein that plays a role in signaling pathways within cells, particularly related to cell growth and differentiation. When activated, RET helps regulate cell survival, proliferation, and differentiation. Mutations or alterations in the RET gene can lead to uncontrolled cell growth and potentially the development of cancer.
@@ -26,7 +26,7 @@
 Given the benchmarking goal, a scaffold-based splitting approach was applied to ensure training and test sets contain distinct chemical structures while maintaining the diversity of scaffolds.
 
 **Distribution of the train/test in the chemical space**
-![image](https://fs.polarishub.io/public/datasets/kinases/ret/figures/drewry_ret_wildtype_v1_tnse_scaffold_split.png)
+![image](https://storage.polarishub.io/public/datasets/kinases/ret/figures/drewry_ret_wildtype_v1_tnse_scaffold_split.png)
 
 ## Related links
 The full curation and creation process is documented -> [notebook](https://github.com/polaris-hub/polaris-recipes/blob/main/03_Kinases/RET)

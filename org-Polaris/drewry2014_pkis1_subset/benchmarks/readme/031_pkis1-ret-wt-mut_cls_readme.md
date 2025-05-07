@@ -33,7 +33,7 @@
 Given the benchmarking goal, a scaffold-based splitting approach was applied to ensure training and test sets contain distinct chemical structures while maintaining the diversity of scaffolds.
 
 **Distribution of the train/test in the chemical space**
-![image](https://fs.polarishub.io/public/datasets/kinases/ret/figures/drewry_ret_wt_v804l_y791f_v1_tnse_scaffold_split.png)
+![image](https://storage.polarishub.io/public/datasets/kinases/ret/figures/drewry_ret_wt_v804l_y791f_v1_tnse_scaffold_split.png)
 
 **For more details of this benchmark** -> [notebook](https://github.com/polaris-hub/polaris-recipes/blob/main/03_Kinases/RET)
 

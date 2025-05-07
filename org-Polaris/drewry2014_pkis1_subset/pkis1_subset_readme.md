@@ -1,4 +1,4 @@
-![kinase](https://fs.polarishub.io/public/icons/icons8-fox-60-kinases.png)
+![kinase](https://storage.polarishub.io/public/icons/icons8-fox-60-kinases.png)
 
 ## Background:
  Kinases play a crucial role in cellular signalling, making them important targets for drug development. Dysregulation of kinases is frequently implicated in diseases like cancer, inflammation, and neurodegenerative disorders. Therefore, targeting kinases with specific drugs has emerged as a crucial strategy in modern drug discovery. Kinase-related task includes inhibition prediction, selectivity prediction, or kinase-ligand binding affinity prediction. In the early release version of Polaris, benchmarks were established for kinases such as EGFR, KIT, and RET, along with their respective mutations.

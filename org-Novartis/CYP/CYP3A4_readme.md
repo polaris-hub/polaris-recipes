@@ -15,4 +15,4 @@ To assess time-dependent inhibition (TDI), inactivation rate constants (kobs val
 - Training set: https://pubs.acs.org/doi/suppl/10.1021/acs.chemrestox.3c00305/suppl_file/- tx3c00305_si_002.xlsx 
 - Test set: https://pubs.acs.org/doi/suppl/10.1021/acs.chemrestox.3c00305/suppl_file/tx3c00305_si_003.xlsx
 
-**Processed data**: https://fs.polarishub.io/publicc/polaris-recipes/org-novartis/CYP/data/raw/train_test.parquet
+**Processed data**: https://storage.polarishub.io/publicc/polaris-recipes/org-novartis/CYP/data/raw/train_test.parquet

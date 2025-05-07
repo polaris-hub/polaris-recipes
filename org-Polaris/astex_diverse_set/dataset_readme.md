@@ -5,4 +5,4 @@ The Astex Diverse set is a well-established and commonly-used benchmark for eval
 ## Data source
 - Reference: [Hartshorn  et al.](https://pubs.acs.org/doi/abs/10.1021/jm061277y)
 - Orignial: https://zenodo.org/records/8278563
-- Polaris: https://fs.polarishub.io/public/polaris-recipes/org-polaris/posebusters/posebusters_paper_data/astex_diverse_set
+- Polaris: https://storage.polarishub.io/public/polaris-recipes/org-polaris/posebusters/posebusters_paper_data/astex_diverse_set
