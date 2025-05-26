@@ -1,4 +1,4 @@
-![ADME](https://storage.googleapis.com/polaris-public/icons/icons8-whale-96-ADME.png) 
+![ADME](https://storage.polarishub.io/public/icons/icons8-whale-96-ADME.png) 
 
 ## Background
 
@@ -17,4 +17,4 @@ The goal of assessing ADME properties is to understand how a potential drug cand
 To discover more potential hits that are similar to the discovered hits, a random splitting was applied.
 
 **Distribution of the train/test in the chemical space**
-![image](https://storage.googleapis.com/polaris-public/biogen/fang2023_ADME/figures/multitask_random_chemspace.png)
+![image](https://storage.polarishub.io/public/biogen/fang2023_ADME/figures/multitask_random_chemspace.png)

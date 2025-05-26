@@ -1,4 +1,4 @@
-![molprop](https://storage.googleapis.com/polaris-public/icons/icons8-fox-60-kinases.png)
+![molprop](https://storage.polarishub.io/public/icons/icons8-fox-60-kinases.png)
 
 ### Background
 **LOK** (STK10) is involved in multiple signaling pathways, including the p38 mitogen-activated protein kinase (MAPK) pathway. 
@@ -31,7 +31,7 @@ research on STK10 as a therapeutic target was still in its early stages. Preclin
 Given the benchmarking goal, a scaffold-based splitting approach was applied to ensure training and test sets contain distinct chemical structures while maintaining the diversity of scaffolds.
 
 **Distribution of the train/test in the chemical space**
-![image](![molprop](https://storage.googleapis.com/polaris-public/icons/icons8-fox-60-kinases.png)
+![image](![molprop](https://storage.polarishub.io/public/icons/icons8-fox-60-kinases.png)
 
 ### Background
 **LOK** (STK10) is involved in multiple signaling pathways, including the p38 mitogen-activated protein kinase (MAPK) pathway. 
@@ -64,7 +64,7 @@ research on STK10 as a therapeutic target was still in its early stages. Preclin
 Given the benchmarking goal, a scaffold-based splitting approach was applied to ensure training and test sets contain distinct chemical structures while maintaining the diversity of scaffolds.
 
 **Distribution of the train/test in the chemical space**
-![image](https://storage.googleapis.com/polaris-public/datasets/kinases/lok_slk/figures/drewry_lok_slk_v1_tnse_scaffold_split.png)
+![image](https://storage.polarishub.io/public/datasets/kinases/lok_slk/figures/drewry_lok_slk_v1_tnse_scaffold_split.png)
 
 
 ## Related links

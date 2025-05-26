@@ -6,7 +6,7 @@ Data that were used for developing the models are made publicly accessible by de
 ## Assay Information
 Hepatic metabolic stability is a key pharmacokinetic parameter in drug discovery. Metabolic stability is usually assessed in microsomal fractions and only the best compounds progress in the drug discovery process. A high-throughput single time point substrate depletion method in rat liver microsomes (RLM) is employed at the National Center for Advancing Translational Sciences (NCATS) as a Tier 1 assay. Between 2012 and 2020, RLM stability (in vitro half-life) data was generated for ~24,000 compounds from more than 250 NCATS projects that cover a wide range of pharmacological targets and cellular pathways. Data for ~2500 compounds along with the global prediction models are publicly available.
 
-![image.png](https://storage.googleapis.com/polaris-public/icons/icon_adme_ncats.jpg)
+![image.png](https://storage.polarishub.io/public/icons/icon_adme_ncats.jpg)
 
 Image is from [this paper](https://link.springer.com/article/10.1007/s00216-016-9929-6). Biologically active compounds can be transformed or destroyed by the action of enzymes in the liver. Microsomes are small membrane bubbles (vesicles) that come from a fragmented cell membrane, and can be used as a proxy for how well a drug survives a trip through the liver.
 

@@ -1,5 +1,5 @@
 
-![molprop](https://storage.googleapis.com/polaris-public/icons/icons8-bear-100-Molprop.png)
+![molprop](https://storage.polarishub.io/public/icons/icons8-bear-100-Molprop.png)
 
 ## Background
 

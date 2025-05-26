@@ -1,4 +1,4 @@
-![ADME](https://storage.googleapis.com/polaris-public/icons/icon_fang.png) 
+![ADME](https://storage.polarishub.io/public/icons/icon_fang.png) 
 
 ## Background
 
